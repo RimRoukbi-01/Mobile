@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -37,6 +40,7 @@ android {
 
     dataBinding.enable = true
     viewBinding.enable = true
+
 }
 
 dependencies {
@@ -61,4 +65,14 @@ dependencies {
 
     //https://github.com/google/gson
     implementation("com.google.code.gson:gson:2.10.1")
+    //Retrofit implementation
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    //hilt implementation
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+}
+kapt {
+    correctErrorTypes = true
 }
