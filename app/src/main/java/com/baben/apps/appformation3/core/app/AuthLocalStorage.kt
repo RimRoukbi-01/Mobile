@@ -7,7 +7,6 @@ import android.content.Context
 class AuthLocalStorage(context: Context) {
 
     companion object {
-
         const val TOKEN_KEY: String = "com.baben.apps.appformation3.core.app.tokenKey"
         const val SHARD_PREFERENCE_KEY: String = "com.baben.apps.appformation3.core.app.sharedpreference"
     }

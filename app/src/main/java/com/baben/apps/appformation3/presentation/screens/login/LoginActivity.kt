@@ -25,13 +25,9 @@ class LoginActivity : BaseActivities() {
         binding.uiLoginButton.setOnClickListener {
             val username = binding.uiUsernameEditText.text.toString()
             val password = binding.uiPasswordEditText.text.toString()
-            authViewModel.login1(username, password)
+
     }
-        authViewModel.loginResult.observe(this, Observer { loginSuccess ->
-            if (loginSuccess) {
-            } else {
-            }
-        })
+
 
     }
 
